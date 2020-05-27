@@ -51,10 +51,8 @@ function drop(event) {
   const isCorrectMatching = draggableElementData === droppableElementData;
   if(isCorrectMatching) {
     const draggableElement = document.getElementById(draggableElementData);
-    event.target.classList.add("dropped");
     pontuacao++;
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
-    event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
