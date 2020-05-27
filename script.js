@@ -2,6 +2,23 @@ const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
 let pontuacao = 0;
 
+
+
+
+
+
+let sapo = "frog";
+let pontosSapo = 3;
+
+let aranha = "spider";
+let pontosAranha = 2;
+
+
+
+
+
+
+
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
   // elem.addEventListener("drag", drag); // Fires when a dragged item (element or text selection) is dragged
@@ -22,6 +39,8 @@ droppableElements.forEach(elem => {
 function dragStart(event) {
   event.dataTransfer.setData("text", event.target.id); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
 }
+
+
 
 //Events fired on the drop target
 
@@ -49,12 +68,35 @@ function drop(event) {
   const draggableElementData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
   const droppableElementData = event.target.getAttribute("data-draggable-id");
   const isCorrectMatching = draggableElementData === droppableElementData;
+
+
+  
   if(isCorrectMatching) {
     const draggableElement = document.getElementById(draggableElementData);
-    pontuacao++;
+
+    if(draggableElementData == sapo){
+      pontuacao = pontuacao + pontosSapo;
+    }
+
+    if(draggableElementData == aranha){
+      pontuacao = pontuacao + pontosAranha;
+    }
+
+
+    
+
+
+
+    document.getElementById("result").innerHTML = ('Pontuação: ' + pontuacao);
+
+
+
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<i class="fas fa-${draggableElementData}"></i>`);
+
+    
+
   }
 }

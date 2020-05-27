@@ -30,7 +30,7 @@ body {
 
 .droppable-elements{
   display: flex;
-  margin: 20rem 30rem;
+  margin: 10rem 30rem;
 }
 .droppable {
   height: 10rem;
@@ -76,4 +76,13 @@ body {
 @media (max-width: 600px) {
   html { font-size: 14px; }
   .draggable-elements { margin: 1.5rem; }
+}
+
+h1{
+  font-size: 72px;
+  text-align: center;
+}
+
+embed{
+  opacity: 0%;
 }
