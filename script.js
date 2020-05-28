@@ -1,6 +1,9 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
 let pontuacao = 0;
+let objetivo = Math.floor(Math.random() * 20) + 10;
+
+document.getElementById("objetivo").innerHTML = ('Objetivo: ' + objetivo);
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart);  
@@ -75,6 +78,20 @@ function drop(event) {
     issoAquiExisteSoPeloParse = 0;
 
     document.getElementById("result").innerHTML = ('Pontuação: ' + pontuacao);
+
+    if (pontuacao == objetivo){
+      alert("Você venceu!");
+      document.body.innerHTML = "";
+      location.reload();
+    }else{
+      if (pontuacao > objetivo){
+        alert("Ó não, tente novamente!");
+        document.body.innerHTML = "";
+        location.reload();
+      }
+
+    }
+
 
   }
 }
