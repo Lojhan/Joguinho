@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+
+/* @font-face {
+  font-family: "myFirstFont";
+  src: url("./fonts/80.ttf");
+} */
+
 
 * {
   margin: 0;
@@ -7,10 +14,10 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: rgb(255, 255, 255);
+  font-family: "Luckiest Guy";
+  background-color: rgb(255, 170, 206);
+  
 }
-
 .draggable-elements {
   display: flex;
   margin: 2rem 30rem;
@@ -27,7 +34,6 @@ body {
 .draggable:hover {
   opacity: 0.5;
 }
-
 .droppable-elements{
   display: flex;
   margin: 10rem 30rem;
@@ -35,7 +41,7 @@ body {
 .droppable {
   height: 10rem;
   width: 10rem;
-  margin: 5rem auto;
+  margin: 10rem auto;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -43,14 +49,9 @@ body {
 }
 .droppable span {
   font-size: 1.25rem;
-  pointer-events: none; /* The element is never the target of pointer events */
+  pointer-events: none;
 }
-
-
-/* Drag and Drop Related Styling */
-
 .droppable.droppable-hover {
-  /* background-color: #bee3f0; */
   border-width: 5px;
   transform: scale(1.5);
 }
@@ -79,11 +80,16 @@ body {
   .draggable-elements { margin: 1.5rem; }
 }
 
-h1{
-  font-size: 72px;
-  text-align: center;
-}
+/* ------------------------------------------------- */
 
-embed{
-  background-color: green;
+
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+
+  color: white;
+  text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black, 0.05em 0.005em 0 black, 0em 0.08em 0 black, 0.05em 0.08em 0 black, 0px -0.03em 0 black, -0.03em -0.03em 0 black, -0.03em 0.08em 0 black, -0.03em 0 0 black;
+
 }

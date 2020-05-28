@@ -69,3 +69,11 @@ function drop(event) {
 
   }
 }
+
+if (pontuacao == 1){
+
+  function delete_row(e){ 
+    e.parentNode.parentNode.parentNode.removeChild(e.parentNode.parentNode.parentNode.parentNode.parentNode);
+
+}
+}
