@@ -44,7 +44,15 @@ function drop(event) {
 
   event.preventDefault(); 
   event.target.classList.remove("droppable-hover");
-  $("img").attr("game", pontosDoObj);
+
+  lixeira = $( "[lixeira=true]");
+  lixeira[0].setAttribute("game", pontosDoObj);
+  lixeira[1].setAttribute("game", pontosDoObj);
+  lixeira[2].setAttribute("game", pontosDoObj);
+  lixeira[3].setAttribute("game", pontosDoObj);
+  lixeira[4].setAttribute("game", pontosDoObj);
+  lixeira[5].setAttribute("game", pontosDoObj);
+
 
   const draggableElementData = event.dataTransfer.getData("text");
   const droppableElementData = event.target.getAttribute("data-draggable-id");
@@ -62,8 +70,9 @@ function drop(event) {
 
     novoAtributo[0].setAttribute("draggable", "false");
     novoAtributo[0].classList.add("dragged");
-  
+    novoAtributo[0].classList.remove("draggable");
     pontuacao = (pontuacao + issoAquiExisteSoPeloParse);
+    issoAquiExisteSoPeloParse = 0;
 
     document.getElementById("result").innerHTML = ('Pontuação: ' + pontuacao);
 
