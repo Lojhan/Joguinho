@@ -46,6 +46,7 @@ body {
   pointer-events: none; /* The element is never the target of pointer events */
 }
 
+
 /* Drag and Drop Related Styling */
 
 .droppable.droppable-hover {
