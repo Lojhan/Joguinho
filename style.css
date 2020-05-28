@@ -82,14 +82,12 @@ body {
 
 /* ------------------------------------------------- */
 
-
-
 h1 {
-  margin: 0;
   text-align: center;
-  font-size: 50px;
-
+  margin: 10px;
+  font-size: 40px;
   color: white;
   text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black, 0.05em 0.005em 0 black, 0em 0.08em 0 black, 0.05em 0.08em 0 black, 0px -0.03em 0 black, -0.03em -0.03em 0 black, -0.03em 0.08em 0 black, -0.03em 0 0 black;
-
 }
+
+

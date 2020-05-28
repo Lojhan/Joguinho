@@ -6,42 +6,44 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
   <link rel="stylesheet" href="./style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="jquery.dataAttr.js"></script>
 
 </head>
 <body>
-<section > 
-  <div><h1>matematicando a ecologia</h1></div>
-</section>
+
 
   <section class="droppable-elements">
  
-      <img src="./images/metais.png" class="droppable metais" game="5" data-draggable-id="metal" width="300" height="300">
-      <img src="./images/naoReciclaveis.png" class="droppable metais" game="5" data-draggable-id="naoReciclavel" width="300" height="300">
-      <img src="./images/organicos.png" class="droppable metais" game="5" data-draggable-id="organico" width="300" height="300">
-      <img src="./images/papeis.png" class="droppable metais" game="5" data-draggable-id="papel" width="300" height="300">
-      <img src="./images/plasticos.png" class="droppable metais" game="5" data-draggable-id="plastico" width="300" height="300">
-      <img src="./images/vidros.png" class="droppable metais" game="5" data-draggable-id="vidro" width="300" height="300">
+      <img src="./images/metais.png"         class="droppable metais" game="0" data-draggable-id="metal" width="300" height="300">
+      <img src="./images/naoReciclaveis.png" class="droppable metais" game="0" data-draggable-id="naoReciclavel" width="300" height="300">
+      <img src="./images/organicos.png"      class="droppable metais" game="0" data-draggable-id="organico" width="300" height="300">
+      <img src="./images/papeis.png"         class="droppable metais" game="0" data-draggable-id="papel" width="300" height="300">
+      <img src="./images/plasticos.png"      class="droppable metais" game="0" data-draggable-id="plastico" width="300" height="300">
+      <img src="./images/vidros.png"         class="droppable metais" game="0" data-draggable-id="vidro" width="300" height="300">
 
   </section>
+  
+  <div><h1 id="result">Pontuação: 0</h1></div>
 
   <section class="draggable-elements">
 
-    <i class="fas fa-cat draggable lixo" draggable="true" game="1" style="color: #ff6384;" id="metal"></i>
-    <i class="fas fa-dog draggable" draggable="true" game="2" style="color: #36a2eb;" id="naoReciclavel"></i>
-    <i class="fas fa-dove draggable" draggable="true" game="3" style="color: #ffce56;" id="organico"></i>
-    <i class="fas fa-fish draggable" draggable="true" game="4" style="color: #9966ff;" id="papel"></i>
-    <i class="fas fa-frog draggable" draggable="true" game="5" style="color: #4bc0c0;" id="plastico"></i>
-    <i class="fas fa-horse draggable" draggable="true" game="6" style="color: #333333;" id="vidro"></i>
-    <i class="fas fa-spider draggable" draggable="true" game="7" style="color: rgba(57, 32, 128, 0.8);" id="papel"></i>
+    <i class="fas fa-cat draggable lixo" draggable="true" game="1" unique="A" style="color: #ff6384;" id="metal"></i>
+    <i class="fas fa-dog draggable"      draggable="true" game="2" unique="B" style="color: #36a2eb;" id="naoReciclavel"></i>
+    <i class="fas fa-dove draggable"     draggable="true" game="3" unique="C" style="color: #ffce56;" id="organico"></i>
+    <i class="fas fa-fish draggable"     draggable="true" game="4" unique="D" style="color: #9966ff;" id="papel"></i>
+    <i class="fas fa-frog draggable"     draggable="true" game="5" unique="E" style="color: #4bc0c0;" id="plastico"></i>
+    <i class="fas fa-horse draggable"    draggable="true" game="6" unique="F" style="color: #333333;" id="vidro"></i>
+    <i class="fas fa-spider draggable"   draggable="true" game="7" unique="G" style="color: #4bc0c0;" id="papel"></i>
 
   </section>
 
   <script src="./script.js"></script>
 
-  <div><h1 id="result">Pontuação: 0</h1></div>
   
   <!-- <embed src="./sounds/pokemonMusic.mp3" loop="true" autostart="true" width="2"height="2">  -->
 
 </body>
 
 </html>
+
+
