@@ -4,8 +4,6 @@ let pontuacao = 0;
 let objetivo = Math.floor(Math.random() * 20) + 10;
 var vidas = 3;
 
-
-
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart);  
 });
@@ -57,7 +55,6 @@ function drop(event) {
   lixeira[4].setAttribute("game", pontosDoObj);
   lixeira[5].setAttribute("game", pontosDoObj);
 
-
   const draggableElementData = event.dataTransfer.getData("text");
   const droppableElementData = event.target.getAttribute("data-draggable-id");
   const isCorrectMatching = draggableElementData === droppableElementData;
@@ -65,16 +62,15 @@ function drop(event) {
   if(isCorrectMatching) {
     
     const draggableElement = document.getElementById(draggableElementData);
-
     var inGame = event.target.getAttribute("game");
 
     issoAquiExisteSoPeloParse = parseInt(inGame, 10);
 
     novoAtributo = $( "[unique=" + valorUnico + "]");
-
     novoAtributo[0].setAttribute("draggable", "false");
     novoAtributo[0].classList.add("dragged");
     novoAtributo[0].classList.remove("draggable");
+
     pontuacao = (pontuacao + issoAquiExisteSoPeloParse);
     issoAquiExisteSoPeloParse = 0;
 
@@ -104,7 +100,6 @@ function drop(event) {
         document.body.innerHTML = "";
         location.reload();
     }
-
   }
 
-    document.getElementById("objetivo").innerHTML = ('Objetivo: ' + objetivo);
+  document.getElementById("objetivo").innerHTML = ('Objetivo: ' + objetivo);

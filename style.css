@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
 
-/* @font-face {
-  font-family: "myFirstFont";
-  src: url("./fonts/80.ttf");
-} */
-
-
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +9,8 @@
 
 body {
   font-family: "Luckiest Guy";
-  /* background: #4e54c8; */
   background-image: url(./images/background.png);
   background-size: 100%;
-  
 }
 .draggable-elements {
   display: flex;
@@ -35,7 +27,6 @@ body {
   cursor: move;
   transition: opacity 0.2s;
 }
-
 .dragged {
   user-select: none;
   opacity: 0.1;
@@ -47,11 +38,9 @@ body {
   flex: auto;
   margin: 1rem 1rem;
   transition: opacity 0.2s;
-
 }
-
 .draggable:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .droppable-elements{
   display: flex;
@@ -85,8 +74,6 @@ body {
 .droppable.dropped i {
   pointer-events: none;
 }
-
-
 .dragged:hover {
   opacity: 0.1;
 }
@@ -96,7 +83,7 @@ body {
   .draggable-elements { margin: 1.5rem; }
 }
 
-/* ------------------------------------------------- */
+/* -------------------------------------------- */
 
 h1 {
   text-align: center;
@@ -108,5 +95,37 @@ h1 {
 }
 
 
-/* ------------------------------------------------ */
+/* --------------ANIMAÇÕES--------------------- */
+
+.pulse:hover{
+  animation: pulse 0.5s ease-in infinite;
+}
+.wiggle {
+  display: inline-block;
+  animation: wiggle 1.7s infinite;
+  }
+  .wiggle2 {
+    display: inline-block;
+    animation: wiggle 2.5s infinite;
+    }
+    .wiggle3 {
+      display: inline-block;
+      animation: wiggle 3s infinite;
+      }
+      .wiggle4 {
+        display: inline-block;
+        animation: wiggle 1s infinite;
+        }
+
+@keyframes pulse{
+  25%  {transform: scale(0.9);}
+  75%  {transform: scale(1.1);}
+}
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+ 80% { transform: rotate(0deg); }
+ 85% { transform: rotate(5deg); }
+ 95% { transform: rotate(-5deg); }
+100% { transform: rotate(0deg); }
+}
 
