@@ -2,8 +2,9 @@ const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
 let pontuacao = 0;
 let objetivo = Math.floor(Math.random() * 20) + 10;
+var vidas = 3;
 
-document.getElementById("objetivo").innerHTML = ('Objetivo: ' + objetivo);
+
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart);  
@@ -77,22 +78,33 @@ function drop(event) {
     pontuacao = (pontuacao + issoAquiExisteSoPeloParse);
     issoAquiExisteSoPeloParse = 0;
 
-    document.getElementById("result").innerHTML = ('Pontuação: ' + pontuacao);
+    document.getElementById("result").innerHTML = ('Total: ' + pontuacao);
 
     if (pontuacao == objetivo){
       alert("Você venceu!");
       document.body.innerHTML = "";
       location.reload();
     }else{
-      if (pontuacao > objetivo){
+      if(pontuacao > objetivo){
         alert("Ó não, tente novamente!");
         document.body.innerHTML = "";
         location.reload();
+        }
       }
-
     }
 
+    if(!isCorrectMatching){
+      vidas--;
+    }
+
+    document.getElementById("vidas").innerHTML = ('Vidas: ' + vidas);  
+
+    if(vidas == 0){
+      alert("Ó não, tente novamente!");
+        document.body.innerHTML = "";
+        location.reload();
+    }
 
   }
-}
 
+    document.getElementById("objetivo").innerHTML = ('Objetivo: ' + objetivo);
