@@ -103,3 +103,7 @@ function drop(event) {
   }
 
   document.getElementById("objetivo").innerHTML = ('Objetivo: ' + objetivo);
+
+
+  
+
