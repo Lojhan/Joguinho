@@ -21,9 +21,9 @@ droppableElements.forEach(elem => {
 
 });
 
-function playAcerto(){ 
-  acertar.play(); 
-} 
+// function playAcerto(){ 
+//   acertar.play(); 
+// } 
 
 
 
@@ -72,7 +72,7 @@ function drop(event) {
 
   if(isCorrectMatching) {
 
-    playAcerto(acertar);
+    // playAcerto(acertar);
     
     const draggableElement = document.getElementById(draggableElementData);
     var inGame = event.target.getAttribute("game");
@@ -127,7 +127,7 @@ function drop(event) {
     body.classList.add("fundo");
     document.body.innerHTML = "<h3 onclick="+"recomecar();"+" class="+"win"+">Você venceu!</h3>"+"<audio id="+"ganhou"+"><source src="+"./sounds/08.mp3"+"type="+"audio/mpeg"+"></audio>";
     var ganhou = document.getElementById("ganhou"); 
-    ganhou.play();
+    // ganhou.play();
 
     
 
