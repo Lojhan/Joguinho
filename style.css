@@ -10,18 +10,137 @@
 body {
   font-family: "Luckiest Guy";
   background-image: url(./images/background.png);
-  background-size: 100%;
+  background-size: 100% auto;
 }
 .draggable-elements {
   display: flex;
-  margin: 1.5rem 20rem;
+  margin: 1.5rem 20rem auto;
   background-color: antiquewhite;
   border-style: groove;
   border-radius: 20px;
   border-width: 10px;
   border-color: chocolate;
-  
+  margin-top: 100px;
 }
+
+.box{
+ display: flex;
+ flex-direction: row;
+}
+
+/*--------------informações----------------*/
+#info {
+  position: static;
+  margin-left: 20px;
+  padding-top: 20px;
+  margin-top: 50px;
+  padding-left: 100px;
+}
+
+#side-menu {
+  color: white;
+  width: 80px;
+  padding: 20px;
+  list-style: none;
+  transition: ease-in-out all .4s;
+  display: table;
+}
+
+li {
+  width: 50%;
+  height: 100%;
+  display: table-cell;
+  position: fixed;
+}
+
+.instrucoes {
+  float: left;
+  opacity: 0;
+  position: absolute;
+  transition: ease-in-out all .4s;
+}
+
+#side-menu:hover {
+  width: 400px;
+}
+
+#side-menu:hover .instrucoes {
+  opacity: 1;
+  text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black, 0.05em 0.005em 0 black, 0em 0.08em 0 black, 0.05em 0.08em 0 black, 0px -0.03em 0 black, -0.03em -0.03em 0 black, -0.03em 0.08em 0 black, -0.03em 0 0 black;
+  font-size: 26px;
+}
+
+#side-menu:hover #cestas {
+  margin-top: -100px;
+  padding-left: 100px;
+}
+
+#side-menu:hover #cestasExemplo {
+  margin-top: -400px;
+  margin-left: 100px;
+  border-radius: 20px;
+  width: 250px;
+  border-style: groove;
+  border-radius: 20px;
+  border-width: 10px;
+  border-color: chocolate;
+
+}
+
+#side-menu:hover #valor {
+  right: -90%;
+  margin-top: -100px;
+  font-size: 32px;
+}
+
+#side-menu:hover #seta {
+  right: -85%;
+  margin-top: -40px;
+  transition: ease-in-out all .4s;
+
+}
+
+#side-menu:hover #seta2 {
+  transform: rotate(180deg);
+  margin-top: -250px;
+  margin-left: 450px;
+}
+
+#side-menu:hover #seta3 {
+  margin-top: -650px;
+  margin-left: 20px;
+}
+
+#side-menu:hover #seta4 {
+  margin-top: -700px;
+  margin-left: 80%;
+  transform: rotate(180deg);
+}
+
+#side-menu:hover #seta5 {
+  margin-top: -680px;
+  margin-left: 47%;
+  transform: scale(0.6);
+}
+
+#side-menu:hover #total {
+  margin-top: -550px;
+}
+
+#side-menu:hover #objetivo {
+  margin-top: -600px;
+  font-size: 20px;
+  margin-left: 27%;
+}
+
+#side-menu:hover #vidas {
+  margin-top: -600px;
+  text-align: center;
+  padding-left: 75%;
+}
+
+/*-----------------------------------------------------------*/
+
 .draggable {
   min-width: 100px;
   min-height: 100px;
@@ -29,7 +148,7 @@ body {
   max-height: 100px;
   flex: auto;
   font-size: 4rem;
-  margin: 1rem 1rem;
+  margin: 1rem 1rem auto;
   cursor: move;
   transition: opacity 0.2s;
 }
@@ -42,15 +161,16 @@ body {
   max-width: 100px;
   max-height: 100px;
   flex: auto;
-  margin: 1rem 1rem;
+  margin: 1rem 1rem auto;
   transition: opacity 0.2s;
+
 }
 .draggable:hover {
   opacity: 0.8;
 }
 .droppable-elements{
   display: flex;
-  margin: 10rem 30rem;
+  margin: 10rem 40rem;
 }
 .droppable {
   height: 10rem;
@@ -75,7 +195,7 @@ body {
 }
 .droppable.dropped span {
   font-size: 0.75rem;
-  margin-top: 0.5rem;
+  margin-top: 0.5rem auto;
 }
 .droppable.dropped i {
   pointer-events: none;
@@ -97,7 +217,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100% auto;
   
 }
 
@@ -113,6 +233,17 @@ h1 {
   color: white;
   text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black, 0.05em 0.005em 0 black, 0em 0.08em 0 black, 0.05em 0.08em 0 black, 0px -0.03em 0 black, -0.03em -0.03em 0 black, -0.03em 0.08em 0 black, -0.03em 0 0 black;
   animation: bop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+
+h2{
+  padding: 30px;
+  position: absolute;
+  right: 3%;
+  top: 0;
+  font-size: 16px;
+  color: #fff;
+  text-shadow: 0 0.1em 20px black, 0.05em -0.03em 0 black, 0.05em 0.005em 0 black, 0em 0.08em 0 black, 0.05em 0.08em 0 black, 0px -0.03em 0 black, -0.03em -0.03em 0 black, -0.03em 0.08em 0 black, -0.03em 0 0 black;
+
 }
 
 
