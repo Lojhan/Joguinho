@@ -81,7 +81,6 @@ droppableElements.forEach(elem => {
 
   if(isCorrectMatching) {
 
-    playAcerto(acertar);
     
     const draggableElement = document.getElementById(draggableElementData);
     var inGame = event.target.getAttribute("game");
