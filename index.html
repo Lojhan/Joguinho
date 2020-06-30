@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="./style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="jquery.dataAttr.js"></script>
-  
+
 
 </head>
 
 
 <body id="body">
 
-  <!-- <audio id="acertar"><source src="./sounds/20.mp3" type="audio/mpeg"></audio> -->
+  <span id="tutoHandler"></span>
 
   <div style="display: inline-flex"><h1 id="result">Total: 0</h1><h1 id="objetivo">Objetivo: 0</h1><h1 id="vidas">Vidas: 3</h1>
-    <h2 >Um jogo de Vinícius Lojhan, Julia Scheffer e Amanda Marochi</h2></div>
+    <h2 style="margin-left: 260px;margin-top: 16px;">Um jogo de Vinícius Lojhan, Julia Scheffer e Amanda Marochi</h2></div>
 
   <section class="droppable-elements">
 
- 
+
       <img src="./images/metais.png"         class="droppable" game="0" lixeira="true" data-draggable-id="metal" width="300" height="300">
       <img src="./images/naoReciclaveis.png" class="droppable" game="0" lixeira="true" data-draggable-id="naoReciclavel" width="300" height="300">
       <img src="./images/organicos.png"      class="droppable" game="0" lixeira="true" data-draggable-id="organico" width="300" height="300">
@@ -31,40 +31,10 @@
 
   </section>
 
-  <section class="box">
-  
-  <ul id="side-menu">
-    <li>
-      <img id="seta3" class="instrucoes" src="./images/frecha.png">
-      <text id="total" class="instrucoes">Cada acerto aumenta o valor total</text>
-    </li>
-    <li>
-      <img id="seta5" class="instrucoes" src="./images/frecha.png">
-      <text id="objetivo" class="instrucoes">O total deve se igualar a esse numero para vencer!</text>
-    </li>
-    <li>
-      <img id="seta4" class="instrucoes" src="./images/frecha.png">
-      <text id="vidas" class="instrucoes">Cuidado para não esgotar as vidas</text>
-    </li>
-    <li>
-      <img src="https://img.icons8.com/doodle/50/000000/help.png" id="info"/>
-    </li>
-    <li>
-      <img id="seta2" class="instrucoes" src="./images/arrow.png">
-      <text class="instrucoes" id="cestas">Você deve levar os itens às suas cestas correspondentes</text>
-      <img class="instrucoes" id="cestasExemplo" src="./images/exemplo.png">
-    </li>
-    <li>
-      <text  id="valor" class="instrucoes">Cada item possui um valor próprio</text>
-      <img id="seta" class="instrucoes" src="./images/arrow.png">
-    </li>
-  
-  </ul>
+  <img style="position: absolute; margin: 140px;" src="./images/item.png" onmouseover="tuto();" onmouseout="untuto();" width="50" height="50">
 
 
-    <section class="draggable-elements" style="position: absolute;align-self: center;">
-
-    
+  <section class="draggable-elements" style="align-self: center;">
 
   <div>
 
@@ -74,7 +44,7 @@
   </div>
   <div>
 
-    <img class="pulse wiggle4 draggable" src="./lixo/CD.png"    draggable="true" game="3" unique="C"  id="naoReciclavel"> 
+    <img class="pulse wiggle4 draggable" src="./lixo/CD.png"    draggable="true" game="3" unique="C"  id="plastico">
     <img class="pulse wiggle2 draggable" src="./lixo/copo.png"  draggable="true" game="4" unique="D"  id="vidro">
 
   </div>
@@ -116,20 +86,24 @@
   </div>
   <div>
 
-    <img class="pulse wiggle draggable" src="./lixo/vagem.png"  draggable="true" game="8" unique="Q"  id="organico">
+    <img class="pulse wiggle draggable" src="./lixo/vagem.png"   draggable="true" game="8" unique="Q"  id="organico">
     <img class="pulse wiggle3 draggable" src="./lixo/vinho.png"  draggable="true" game="9" unique="R"  id="vidro">
 
   </div>
 
-  </section>
-</section>
-  <script src="./script.js"></script>
-<!-- 
-    <embed src="./sounds/11.mp3" loop="true" autostart="true" width="2"height="2">  -->
 
- 
+
+
+
+
+  </section>
+
+  <script src="./script.js"></script>
+  <embed src="./sounds/11.mp3" loop="true" autostart="true" width="2"height="2">
+
+
 </body>
-  
+
 
 </html>
 

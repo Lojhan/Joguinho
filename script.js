@@ -3,8 +3,20 @@ const droppableElements = document.querySelectorAll(".droppable");
 let pontuacao = 0;
 let objetivo = Math.floor(Math.random() * 20) + 10;
 var vidas = 3;
-var acertar = document.getElementById("acertar"); 
 
+var tutoHandler = document.getElementById("tutoHandler"); 
+
+function tuto(){
+  
+  tutoHandler.innerHTML = '<img  style="position:absolute; " src="./images/tutorial.png"  id="tuto" width="1920" height="1080"></img>';
+
+}
+
+function untuto(){
+  
+  tutoHandler.innerHTML = '';
+
+}
 
 
 var body = document.getElementById("body"); 
@@ -21,9 +33,9 @@ droppableElements.forEach(elem => {
 
 });
 
-// function playAcerto(){ 
-//   acertar.play(); 
-// } 
+function playAcerto(){ 
+acertar.play(); 
+} 
 
 
 
@@ -58,13 +70,10 @@ function drop(event) {
   event.preventDefault(); 
   event.target.classList.remove("droppable-hover");
 
-  lixeira = $( "[lixeira=true]");
-  lixeira[0].setAttribute("game", pontosDoObj);
-  lixeira[1].setAttribute("game", pontosDoObj);
-  lixeira[2].setAttribute("game", pontosDoObj);
-  lixeira[3].setAttribute("game", pontosDoObj);
-  lixeira[4].setAttribute("game", pontosDoObj);
-  lixeira[5].setAttribute("game", pontosDoObj);
+droppableElements.forEach(elem => {
+  elem.setAttribute("game", pontosDoObj);
+});
+  
 
   const draggableElementData = event.dataTransfer.getData("text");
   const droppableElementData = event.target.getAttribute("data-draggable-id");
@@ -72,7 +81,7 @@ function drop(event) {
 
   if(isCorrectMatching) {
 
-    // playAcerto(acertar);
+    playAcerto(acertar);
     
     const draggableElement = document.getElementById(draggableElementData);
     var inGame = event.target.getAttribute("game");
@@ -92,16 +101,12 @@ function drop(event) {
     document.getElementById("result").innerHTML = ('Total: ' + pontuacao);
 
     if (pontuacao == objetivo){
-      // alert("Você venceu!");
       document.body.innerHTML = "";
       ganhar();
-      // location.reload();
     }else{
       if(pontuacao > objetivo){
-        // alert("Ó não, tente novamente!");
         document.body.innerHTML = "";
         perder();
-        // location.reload();
         }
       }
     }
@@ -113,10 +118,8 @@ function drop(event) {
     document.getElementById("vidas").innerHTML = ('Vidas: ' + vidas);  
 
     if(vidas == 0){
-      // alert("Ó não, tente novamente!");
         document.body.innerHTML = "";
         perder();
-        // location.reload();
     }
   }
 
@@ -127,7 +130,7 @@ function drop(event) {
     body.classList.add("fundo");
     document.body.innerHTML = "<h3 onclick="+"recomecar();"+" class="+"win"+">Você venceu!</h3>"+"<audio id="+"ganhou"+"><source src="+"./sounds/08.mp3"+"type="+"audio/mpeg"+"></audio>";
     var ganhou = document.getElementById("ganhou"); 
-    // ganhou.play();
+    ganhou.play();
 
     
 
